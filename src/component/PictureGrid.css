@@ -1,0 +1,95 @@
+/* PictureGallery.css */
+
+/* Styling for the search box */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Scale up the button on hover */
+  }
+  /* Styling for the picture grid */
+  .picture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px;
+    width: 95%;
+    margin:2% auto;
+
+  }
+
+  .details >p{
+margin: 5px;
+  }
+  
+  /* For medium screen (max-width: 1023px) */
+  @media (max-width: 1023px) {
+    .picture-grid {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  /* For small screen (max-width: 767px) */
+  @media (max-width: 767px) {
+    .picture-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  .picture-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Set a constant size for all images */
+  .picture-item .image-wrapper {
+    width: 300px; 
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+  }
+  
+  .picture-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .picture-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    transform-origin: bottom;
+    transition: transform 0.2s ease-in-out; /* Apply a transition for the hover effect */
+  }
+  
+  .picture-item a:hover {
+    transform: scale(1.1); /* Scale up the link on hover */
+  }
