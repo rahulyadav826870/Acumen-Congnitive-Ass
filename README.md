@@ -32,5 +32,5 @@ npm run dev
 ## Technology Stack
 List and provide a brief overview of the technologies used in the project.
 
-- React js
+- vite + React js
 - dotenv 
